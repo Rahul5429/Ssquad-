@@ -5,7 +5,7 @@ Follow these steps to get both the Node.js backend and the Flutter frontend runn
 ## Prerequisites
 
 - **Node.js** v18+ and npm
-- **MongoDB** running locally (default URI: `mongodb://127.0.0.1:27017/banquets_app`) or you can use mongodb atlas
+- **MongoDB** running locally (default URI: `mongodb://127.0.0.1:27017/banquets_app`) or you can use    mongodb atlas
 - **Flutter SDK** (stable channel) with Dart 3.x
 - **Android Studio** / **Xcode** (optional) for device emulators
 - **Git** (optional, for version control)
@@ -37,15 +37,17 @@ Follow these steps to get both the Node.js backend and the Flutter frontend runn
      JWT_EXPIRES_IN=7d
      ```
 
-4. Start MongoDB locally (skip if already running). Or use atlas link
+4. Start MongoDB locally (skip if already running). Or use atlas link.
 
 5. Seed data runs automatically when the server starts. Launch the backend:
    ```bash
    npm run dev
    ```
 
-6. The API will be available at `http://localhost:4000/api`.
+6. Set the backend base API URL in frontend/lib/core/app_config.dart .
+   The API will be available at `http://localhost:4000/api`.
    If frontend doesn't fetch backend the use your IP insted of localhost.
+   Also I hosted backend on render so if you find any difficulty to setup backend then you can directly use this link in frontend for API: https://banquet-8k4a.onrender.com/api
 
 ---
 
@@ -69,10 +71,8 @@ Follow these steps to get both the Node.js backend and the Flutter frontend runn
 
 4. Run the app on your desired device/emulator:
    ```bash
-   flutter run --dart-define=API_BASE_URL=http://10.0.2.2:4000/api
+   flutter run 
    ```
-   > `10.0.2.2` points the Android emulator to your machine’s localhost. Use `http://localhost:4000/api` for desktop/web builds or the machine IP for physical devices.
-
 ---
 
 ## Authentication & Routing Notes
