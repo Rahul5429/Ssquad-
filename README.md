@@ -1,4 +1,4 @@
-# Project Setup Guide
+# Project Setup Guide 
 
 Follow these steps to get both the Node.js backend and the Flutter frontend running locally.
 
